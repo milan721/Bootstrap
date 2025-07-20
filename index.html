@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+      *{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+
+
+      html{
+        scroll-behavior: smooth;
+        scroll-padding: 100px;
+      }
+      .navbar-nav .nav-link:hover {
+        color: #00a19c;
+      }
+      .nav-link {
+        font-weight: 500;
+      }
+      #b1 {
+        color: #c6c6c6;
+      }
+      #b2 {
+        color: #ff0000;
+      }
+      #b1:hover {
+        color: #00a19c;
+      }
+      .carousel-caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        bottom: auto;
+        width: 100%;
+        text-align: center;
+      }
+      body {
+        margin-top: 95px;
+        background-color: #000000;
+      }
+      .row,footer{
+        margin-top: 80px;
+      }
+
+      #stories{
+        margin-top: 200px;
+      }
+
+      p{
+        text-align: justify;
+      }
+
+      .icons{
+        font-size: 2rem;
+        color: white;
+      }
+      .icons:hover{
+        color: #00a19c;
+      }
+      .card{
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        transition: transform 0.3s ease;
+      }
+      .card:hover{
+        transform: scale(1.05);
+      }
+      .btn{
+        color: white;
+        background-color: #007b77e1;
+      }
+
+      .btn:hover{
+        background-color: #00a19c;
+      }
+
+      @media (max-width: 576px) {
+        .carousel-caption h1 {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+
+  
+  <body>
+    <nav
+      class="navbar fixed-top navbar-expand-lg"
+      style="background-color: #000000"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-5 me-auto gap-4 mb-2 mt-2 mb-lg-0">
+            <li id="b1" class="nav-item">
+              <a class="nav-link" href="#Latest">Latest</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Partners">Patners</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Fans">Fans</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                2025
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="https://www.mercedesamgf1.com/car/2025" target="_blank">Car</a></li>
+                <li><a class="dropdown-item" href="https://www.mercedesamgf1.com/seasons/2025" target="_blank">Calender</a></li>
+                <li><a class="dropdown-item" href="https://www.mercedesamgf1.com/standings/2025" target="_blank">Standings</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Careers">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#stories">Stories</a>
+            </li>
+            
+          </ul>
+
+          <ul class="navbar-nav ms-5 me-1 gap-4 mb-2 mt-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="https://shop.mercedesamgf1.com/?utm_source=parent-domain&utm_medium=website&utm_term=homepage&utm_campaign=navigation" target="_blank">Team Store</a>
+            </li>
+            <li id="b1" class="nav-item" style="background-color: #000000">
+              <a
+                id="b1"
+                class="nav-link active rounded-3"
+                aria-current="page"
+                href="https://www.mercedes-amg.com/en/home" target="_blank"
+                >Mercedes-<span id="b2">AMG</span></a
+              >
+            </li>
+            <li id="b1" class="nav-item" style="background-color: #000000">
+              <a
+                id="b1"
+                class="nav-link active rounded-3"
+                aria-current="page"
+                href="https://www.mercedes-benz.com/en/" target="_blank"
+                >Mercedes-<span id="b2">Benz</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <a class="navbar-brand mx-5 mt-2" href="./index.html">
+          <img
+            src="./images/logo.webp"
+            alt="Mercedes F1"
+            width="203"
+            height="64"
+          />
+        </a>
+      </div>
+    </nav>
+    <!-- content -->
+    <div class="container-fluid carousel-container">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/car.webp" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-block" data-bs-interval="2000">
+              <h1>
+                HOME OF THE <br />
+                MERCEDES AMG PETRONAS <br />
+                FORMULA 1 TEAM
+              </h1>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="./images/car.avif" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-block">
+              <h1>
+                8<br />
+                CONSTRUCTORS CHAMPIONSHIPS<br />
+                
+              </h1>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="./images/car.2.avif" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-block">
+              <h1>
+                9<br />
+                DRIVERS CHAMPIONSHIPS<br />
+              </h1>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+     <!-- grid -->
+      <div class="container-fluid">
+      <div id="Latest" class="row">
+        <h1 class="text-light text-center mb-5">Latest News</h1>
+        <div class="col-lg-6">
+          <p class="text-light">Mercedes-AMG PETRONAS Formula One Team is currently navigating a pivotal period both on and off the track. One of the major talking points is the team's future driver lineup, especially with rising star Andrea Kimi Antonelli, who recently opened up about the immense pressure of balancing academics with his racing career—so much so that he considered quitting. Meanwhile, speculation continues to swirl around Max Verstappen potentially making a shock move to Mercedes in 2026. Team Principal Toto Wolff has remained coy but has responded firmly to Verstappen’s criticisms of the 2026 regulation changes, hinting at broader strategic shifts within the sport. Wolff's leadership style has also garnered attention, with insiders noting his calm but stern demeanor when facing team setbacks. Off the track, George Russell made headlines for purchasing a luxurious £2.2 million Pershing yacht, a move that sparked mixed reactions among fans amid discussions of his long-term commitment to the team. With Lewis Hamilton set to depart for Ferrari in 2025, Mercedes is now at a crossroads—balancing internal development with strategic acquisitions. As the team prepares for a major transition, fans and analysts alike are closely watching how Mercedes plans to reclaim its dominance in the new era of Formula 1.</p>
+        </div>
+        <div class="col-lg-6">
+          <img class="img-fluid" src="./images/latest.webp" alt="">
+        </div>
+      </div>
+
+      <div class="row">
+  <div class="col-sm-3 mb-3 mb-sm-0">
+    <div class="card h-100">
+      <img src="./images/car.avif" class="card-img-top " alt="...">
+      <div class="card-body">
+        <h5 class="card-title">F1 W16</h5>
+        <p class="card-text">Learn More about our title contender.</p>
+        <a href="https://www.mercedesamgf1.com/car/2025" class="btn">Tech Specs</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-sm-3 mb-3 mb-sm-0">
+    <div class="card h-100">
+      <img src="./images/latest.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Our Team</h5>
+        <p class="card-text">Learn more about our team.</p>
+        <a href="https://www.mercedesamgf1.com/team" class="btn">Learn more</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3 mb-3 mb-sm-0">
+    <div class="card h-100">
+      <img src="./images/car.2.avif" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">F1 Explained</h5>
+        <p class="card-text">A guide to all things Formula 1.</p>
+        <a href="https://www.mercedesamgf1.com/f1-explained" class="btn">F1 Explained</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3 mb-3 mb-sm-0">
+    <div class="card h-100">
+      <img src="./images/team.avif" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Canadian Grand Prix</h5>
+        <p class="card-text">Highlights from Montreal.</p>
+        <a href="https://www.mercedesamgf1.com/news/a-great-weekend-to-be-a-mercedes-fan-canadian-gp-recap" class="btn">Learn more</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+        <div id="Team" class="row">
+          <h1 class="text-light text-center mb-5">Team</h1>
+        <div class="col-lg-6">
+          <img class="img-fluid" src="./images/team.avif" alt="">
+        </div>
+        <div class="col-lg-6">
+          <p class="text-light">The Mercedes-AMG PETRONAS Formula One Team is entering a transformative phase in the 2025 season. With Toto Wolff continuing his dual role as Team Principal and CEO, Mercedes remains strategically and commercially focused. James Allison, back as Technical Director, has led the development of the W16 E Performance—a car designed to correct the inconsistencies of its predecessor, featuring advanced aerodynamics and improved suspension. Supporting him is Simone Resta, formerly of Haas and Ferrari, who joined as Deputy Technical Director to bolster technical expertise. The team’s driver lineup marks a new era. George Russell has taken on the lead role following Lewis Hamilton’s departure, and he's joined by 18-year-old rookie Andrea Kimi Antonelli. Their dynamic represents a shift toward a younger, future-focused Mercedes. The W16 has already shown promise, securing a win, multiple podiums, and a strong third place in the Constructors' standings with 210 points so far. Mercedes has also focused on expanding its brand and financial partnerships, notably teaming up with Nasdaq in a multi-year collaboration that underlines the team’s innovation-driven vision. Despite past challenges, both drivers and management have emphasized that the 2025 season reflects “significant changes,” aimed at restoring Mercedes to the forefront of Formula 1 competition.</p>
+        </div>
+        </div>
+
+        <div id="Partners" class="row">
+        <h1 class="text-light text-center mb-5">Our Partners</h1>
+        <div class="col-lg-6">
+          <p class="text-light">For the 2025 Formula One season, the Mercedes-AMG PETRONAS F1 Team boasts a diverse and high-profile lineup of partners and sponsors, each contributing to the team's success both on and off the track. At the core of their partnership portfolio is PETRONAS, the team's long-standing Title and Technical Partner, supplying advanced fuel, lubricants, and fluid technology that have powered Mercedes through its most dominant years. Another key stakeholder is INEOS, not just a Principal Partner but also a one-third shareholder in the team, reinforcing its long-term strategic role. A notable new addition in 2025 is adidas, which joined as the official team apparel partner, outfitting the drivers, engineers, and staff with performance-driven gear, enhancing both functionality and brand identity. In the realm of technology and innovation, Mercedes is backed by partners such as CrowdStrike, Snapdragon, AMD, TeamViewer, and SAP, each playing a role in cybersecurity, data processing, remote collaboration, and analytics. WhatsApp and G42 add to the team’s digital transformation strategy, while Signify supports operational excellence through advanced lighting systems across the team's facilities. Luxury lifestyle and hospitality are represented through partnerships with The Ritz-Carlton, IWC Schaffhausen, and Sherwin-Williams, reinforcing Mercedes' premium brand image. One of the most impactful collaborations in 2025 is the multi-year global partnership with Nasdaq. This alliance goes beyond simple sponsorship—Nasdaq and Mercedes share a commitment to innovation and performance. The Nasdaq brand is featured prominently on race infrastructure, including the Pit Wall Canopy and Engineer’s Central Island, and the partnership is expected to drive fan engagement through co-branded experiences and content. Additional partners like Nuvei, Einhell, Mous, and Akkodis provide support in fintech, tools, mobile accessories, and IT solutions, respectively. Moreover, suppliers such as Pirelli (tyres) and Endless (braking systems) ensure top-tier performance on the track, while regional partner BetterUp contributes to the team’s mental wellness programs. Together, this robust ecosystem of sponsors and collaborators enables Mercedes to maintain its elite competitive edge while also advancing its brand, sustainability efforts, and technological capabilities in the ever-evolving world of Formula One.</p>
+        </div>
+        <div class="col-lg-6">
+          <img class="img-fluid" src="./images/partners.png" alt="">
+        </div>
+        </div>
+
+        <div id="Fans" class="row">
+        <h1 class="text-light text-center mb-5">Fans</h1>
+        <div class="col-lg-6">
+          <img class="img-fluid" src="./images/fans.jpg" alt="">
+        </div>
+        <div class="col-lg-6">
+          <p class="text-light">Mercedes-AMG PETRONAS F1 has made fan engagement a central part of its strategy, blending digital innovations with exclusive real-world experiences. The team actively participates in the F1 Fan Voice platform, where supporters can take polls, share opinions, and compete in seasonal leaderboards to win exclusive prizes—ranging from branded merchandise and signed driver cards to VIP experiences like factory tours or even a WhatsApp video call with team members at the top of the season leaderboard. In addition, the official website features engaging interactive content such as quizzes, prediction polls, wallpaper downloads, and driver cards to encourage fan participation throughout the season. Mercedes has also experimented with experiential marketing, including pop‑up activations in shopping centers (in collaboration with adidas) that featured show cars, racing simulators, and surprise appearances by team members like Valtteri Bottas—though some activations drew mixed feedback on crowd control and communication. Beyond pop‑ups, premium hospitality experiences like the “Miami Club” package include trackside views, driver appearances, gourmet dining, simulators, and exclusive gifts, all packaged into high-end race weekend offerings. On the content side, Mercedes leverages social media and partner activations—such as a CrowdStrike-powered video series unpacking F1 safety tech alongside interactive storytelling—to deepen insights into the team’s operations and engineering culture. Overall, Mercedes is evolving fandom into a narrative-driven, emotionally immersive ecosystem—combining gamified content, real-world fan events, and digital storytelling to style its academy as a team of idols rather than just drivers.</p>
+        </div>
+        </div>
+
+        <div id="Careers" class="row">
+        <h1 class="text-light text-center mb-5">Careers</h1>
+        <div class="col-lg-6">
+          <p class="text-light">The Mercedes-AMG PETRONAS Formula One Team offers a wide range of exciting career opportunities, with a strong emphasis on innovation, precision, and performance. Based at their cutting-edge Brackley technology campus in the UK, the team provides career paths across engineering, aerodynamics, manufacturing, IT, finance, marketing, and business operations. For early-career talent, Mercedes offers structured graduate programs, 12-month industrial placements, apprenticeships, and collaborative projects with top universities. Their graduate program includes roles in performance engineering, data analysis, aerodynamics, legal, HR, and commercial support. The recruitment process typically includes an online application, aptitude assessments, and multiple interview rounds, focusing on key team values like passion, respect, innovation, determination, and excellence. Employees enjoy competitive benefits such as performance bonuses, private medical insurance, a Mercedes vehicle lease scheme, on-site fitness and dining facilities, and relocation support for eligible roles. The team also supports international candidates with visa sponsorships for full-time roles, making it a truly global workplace for the most driven and talented individuals in motorsport.</p>
+        </div>
+        <div class="col-lg-6">
+          <img class="img-fluid" src="./images/careers.jpg" alt="">
+        </div>
+        </div>
+
+
+
+        <div id="stories" class="row">
+          <h1 class="text-light text-center mb-5">Stories</h1>
+  <div class="col-sm-3 mb-3 mb-sm-0">
+    <div class="card h-100">
+      <img src="./images/s8.webp" class="card-img-top " alt="...">
+      <div class="card-body">
+        <p class="card-text">Tight Qualifying Session at Silverstone Nets Second Row Start.</p>
+        <a href="https://www.mercedesamgf1.com/news/tight-qualifying-session-at-silverstone-nets-second-row-start" class="btn">Learn more</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-sm-3 mb-3 mb-sm-0">
+    <div class="card h-100">
+      <img src="./images/s7.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">First day of Running Complete at Silverstone. <br>The team got the British Grand Prix weekend underway at Silverstone, with team members from our nearby factories at Brackley and Brixworth in attendance trackside.</p>
+        <a href="https://www.mercedesamgf1.com/news/first-day-of-running-complete-at-silverstone" class="btn">Learn more</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3 mb-3 mb-sm-0">
+    <div class="card h-100">
+      <img src="./images/s1.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">In Nico’s Words: A Perfect Home German Grand Prix in 2014. “It was one of those weekends where everything just clicked. It was a proud moment for me personally and the team.”</p>
+        <a href="https://www.mercedesamgf1.com/news/in-nicos-words-a-perfect-home-german-grand-prix-in-2014" class="btn">Learn more</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3 mb-3 mb-sm-0">
+    <div class="card h-100">
+      <img src="./images/s2.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Quiz: Can You Name the Mercedes F1 Driver from the Stat?</p>
+        <a href="https://www.mercedesamgf1.com/news/quiz-can-you-name-the-mercedes-f1-driver-from-the-stat" class="btn">Learn more</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-3 mb-3 mb-sm-0">
+    <div class="card h-100">
+      <img src="./images/s3.webp" class="card-img-top " alt="...">
+      <div class="card-body">
+        <p class="card-text">Valtteri Bottas Takes Us on an Exclusive Tour of Our Silverstone Club.</p>
+        <a href="https://www.mercedesamgf1.com/news/valtteri-bottas-takes-us-on-an-exclusive-tour-of-our-silverstone-club" class="btn">Learn more</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-sm-3 mb-3 mb-sm-0">
+    <div class="card h-100">
+      <img src="./images/s4.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">In Pictures: The Best Images from Goodwood 2025. Glorious sunshine mixed with the epic sights and sounds of the Goodwood Festival of Speed, what more could you possibly want for a non-Grand Prix weekend?</p>
+        <a href="https://www.mercedesamgf1.com/news/in-pictures-the-best-images-from-goodwood-2025" class="btn">Learn more</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3 mb-3 mb-sm-0">
+    <div class="card h-100">
+      <img src="./images/s5.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">2025 British GP F1 Akkodis Race Debrief: What happened at Silverstone?</p>
+        <a href="https://www.mercedesamgf1.com/news/2025-british-gp-f1-akkodis-race-debrief-what-happened-at-silverstone" class="btn">Learn more</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3 mb-3 mb-sm-0">
+    <div class="card h-100">
+      <img src="./images/s6.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">How Much Do You Remember About the First Half of F1 2025? <br>Wet races, hot races, poles, podiums, wins.... and LEGO.</p>
+        <a href="https://www.mercedesamgf1.com/news/how-much-do-you-remember-about-the-first-half-of-f1-2025" class="btn">Learn more</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+
+      
+
+
+
+      <footer>
+        <div class="container pt-5 bg">
+          <h2 class="text-center text-light"> Follow Us</h2>
+          <h4 class="text-center text-light mb-4">Visit our official social media channels</h4>
+        </div>
+        <div class="d-flex justify-content-center gap-3 mb-5">
+         
+            <a class=" icons" href="https://www.instagram.com/MercedesAMGF1/#" target="_blank"><i class="fa-brands fa-instagram brands"></i></a>
+            <a class=" icons" href="https://www.youtube.com/@MercedesAMGF1" target="_blank"><i class="fa-brands fa-youtube brands"></i></a>
+            <a class=" icons" href="https://x.com/MERCEDESAMGF1" target="_blank"><i class="fa-brands fa-square-x-twitter brands"></i></a>
+            <a class=" icons" href="https://www.linkedin.com/company/mercedes-amg-petronas-formula-one-team/" target="_blank"><i class="fa-brands fa-linkedin brands"></i></a>
+          
+        </div>
+        <div class="text-white"><p class="mb-1 text-center">&copy; 2025 Mercedes F1 Fan Site. All rights reserved.</p></div>
+
+      </footer>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"
+  ></script>
+</html>
